@@ -1,3 +1,24 @@
+body{
+    background-image: url(https://d3m9l0v76dty0.cloudfront.net/system/photos/3056140/large/25f1be286c711a90706038a81e557b36.jpg);
+}
+
 h1{
     font-family: fantasy;
+    text-align: center;
+    margin: 50px;
+}
+
+.fade_in{
+animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.card{
+    overflow-y: scroll;
+    height: 100px;
+    background-image: url(https://i0.wp.com/digitalpedagogy.co/wp-content/uploads/2020/11/unnamed-1.png?fit=512%2C476&ssl=1) ;
 }
