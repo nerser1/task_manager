@@ -10,25 +10,28 @@
 </head>
 <body>
     <h1 class="fw-bold">My Task Board</h1>
-    <form action="">
-        <div>
-            <label for="description">Task Description: </label>
-            <input id="description" type="text" placeholder="enter task description">    
+    <form class="container d-flex flex-column" action="">
+        <div class="form-content">
+            <div class="d-flex justify-content-around col-12">
+                <label for="description">Task Description: </label>
+                <input id="description" type="text" placeholder="enter task description">    
+            </div>
+            <div class="d-flex justify-content-around col-12">
+                <label for="date">Due Date: </label>
+                <input id="date" type="date">    
+            </div>
+            <div class="d-flex justify-content-around col-12">
+                <label for="time">Due Time: </label>
+                <input id="time" type="time">    
+            </div>
+    
         </div>
-        <div>
-            <label for="date">Due Date: </label>
-            <input id="date" type="date">    
-        </div>
-        <div>
-            <label for="time">Due Time: </label>
-            <input id="time" type="time">    
-        </div>
-        <div>
+        <div class="d-flex justify-content-around col-12">
             <button id="cleanBtn" type="button">Clean Form</button>
             <button id="addTaskBtn" type="button">Add Task</button>    
         </div>
     </form>
-    <div class="d-flex" id="board"></div>
+    <div class="d-flex flex-wrap" id="board"></div>
     <script src="./script.js"></script>
 </body>
 </html>

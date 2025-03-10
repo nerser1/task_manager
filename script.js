@@ -50,21 +50,24 @@ function addToBoard(){
         for (let index = 0; index < taskList.length; index++) {
             const object = taskList[index];
             const card = document.createElement("div");
-            card.classList.add("card", "fade_in")
+            card.classList.add("task", "fade_in", "d-flex", "flex-column")
             const h5 = document.createElement("h5");
             h5.innerText = object.description;
+            const dueDate = document.createElement("div");
             const date = document.createElement("p");
             date.classList.add("fw-bold");
             date.innerText = object.date;
             const time = document.createElement("p");
             time.innerText = object.time;
+            dueDate.append(date, time);
             const taskId = object.id;
             card.addEventListener("mouseover", function(){
                 let deleteBtn = card.querySelector("button");
                 if(!deleteBtn){
                     deleteBtn = document.createElement("button");
+                    deleteBtn.classList.add("btn", "deleteBtn")
                     card.innerHTML = '';
-                    card.append(h5, deleteBtn, date, time);
+                    card.append(deleteBtn, h5, dueDate);
                     deleteBtn.innerHTML = `<i class="bi bi-x"></i>`   
                 }
                 deleteBtn.addEventListener("click", function() {
@@ -73,9 +76,9 @@ function addToBoard(){
             })
             card.addEventListener("mouseleave", function(){
                 card.innerHTML = '';
-                card.append(h5, date, time); 
+                card.append(h5, dueDate); 
             })
-            card.append(h5, date, time);   
+            card.append(h5, dueDate);   
             DOM.board.append(card);   
             
         }
