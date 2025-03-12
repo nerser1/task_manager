@@ -48,24 +48,24 @@ function addToBoard(){
     if(arr){
         const taskList = JSON.parse(arr);
         for (let index = 0; index < taskList.length; index++) {
-            const object = taskList[index];
+            const task = taskList[index];
             const card = document.createElement("div");
             card.classList.add("task","taskBack", "fade_in", "d-flex", "flex-column")
             const headCard = document.createElement("div");
             headCard.classList.add("d-flex", "flex-row", "justify-content-between", "pe-0")
-            const taskId = object.id;
+            const taskId = task.id;
             const idShow = document.createElement("p");
             idShow.innerText = taskId;
             headCard.append(idShow);
             const h5 = document.createElement("h5");
-            h5.innerText = object.description;
+            h5.innerText = task.description;
             const dueDate = document.createElement("div");
             dueDate.classList.add("dueDate")
             const date = document.createElement("p");
             date.classList.add("fw-bold");
-            date.innerText = object.date;
+            date.innerText = task.date;
             const time = document.createElement("p");
-            time.innerText = object.time;
+            time.innerText = task.time;
             dueDate.append(date, time);
             card.addEventListener("mouseover", function(){
                 let deleteBtn = card.querySelector("button");
@@ -75,7 +75,7 @@ function addToBoard(){
                     headCard.append(deleteBtn);
                     card.innerHTML = '';
                     card.append(headCard, h5, dueDate);
-                    deleteBtn.innerHTML = `<i class="bi bi-x"></i>`   
+                    deleteBtn.innerHTML = `<i class="bi bi-x-square-fill"></i>`   
                 }
                 deleteBtn.addEventListener("click", function() {
                     deleteMe(taskId);

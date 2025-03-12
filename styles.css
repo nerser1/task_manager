@@ -25,7 +25,7 @@ h5{
 }
 
 i{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .fade_in{
@@ -42,14 +42,15 @@ animation: fadeIn 3s;
     justify-content: space-between;
     margin:20px 20px 20px 30px;
     padding-right: 20px;
+    padding-top: 20px;
     height: 300px;
     width: 300px;
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/022/299/318/small_2x/sticky-note-paper-transparent-free-png.png) ;
-    background-size: 180% 120%;
+    background-image: url(https://pngimg.com/d/sticky_note_PNG18905.png) ;
+    background-size: 100% 100%;
     background-position: 60% 50%;
 }
 .dueDate{
-    padding: 10px 10px 10px 35px;
+    padding: 10px 10px 10px 10px;
 }
 
 .form-content{
@@ -58,7 +59,6 @@ animation: fadeIn 3s;
     background-size: 90% ;
     padding: 10px;
     border-radius: 20px;
-    font-family: fantasy;
 }
 
 div{
@@ -67,11 +67,11 @@ div{
 
 .deleteBtn{
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     height: 20px;
     width: 20px;
-    background-color: black;
+    background-color:rgba(87, 87, 87, 0);
     border-radius: 5px;
     border: none;
 }
